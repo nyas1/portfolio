@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Compiled files
+src/js/analytics-inject.js
+
+# OS files
+.DS_Store
+Thumbs.db
