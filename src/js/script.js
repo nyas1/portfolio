@@ -286,3 +286,5 @@ document.addEventListener('touchend', function(e) {
 // Mobile swipe handlers bound.
 
 // Pointer-events rules bound to scramblers.
+
+// TextScramble engine initialized.
