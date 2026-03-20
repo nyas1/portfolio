@@ -1,4 +1,4 @@
-fetch('ascii-art.txt')
+fetch('assets/ascii-art.txt')
   .then(r => r.text())
   .then(text => {
     const lines = text.split('\n');
