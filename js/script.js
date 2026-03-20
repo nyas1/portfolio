@@ -17,7 +17,7 @@ fetch('assets/ascii-art.txt')
 
     const scaleX = box.offsetWidth / pre.scrollWidth;
     const scaleY = box.offsetHeight / pre.scrollHeight;
-    const scale = Math.max(scaleX, scaleY);
+    const scale = Math.min(scaleX, scaleY);
     const scaledW = pre.scrollWidth * scale;
     const scaledH = pre.scrollHeight * scale;
     const offsetX = (box.offsetWidth - scaledW) / 2;
@@ -51,7 +51,6 @@ function scramble(el, targetOverride, fast = false) {
   }, ms);
 }
 
-// Name scramble on load
 document.querySelectorAll('.scramble').forEach((el, i) => {
   setTimeout(() => scramble(el), i * 120);
 });
@@ -80,15 +79,13 @@ function setActive(link, skipScramble = false) {
   }
 }
 
-// Initial state: scramble nav on load
-setActive(document.querySelector('.nav a[href="#home"]'), false);
+setActive(document.querySelector('.nav a[href="#home"]'));
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const link = document.querySelector(`.nav a[href="#${entry.target.id}"]`);
       setActive(link);
-      // Scramble the section h2 when it comes into view
       const h2 = entry.target.querySelector('h2[data-text]');
       if (h2) scramble(h2, undefined, true);
     }

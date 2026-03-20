@@ -39,9 +39,6 @@ body {
   color: #fff;
 }
 
-.logo {
-  color: #fff;
-}
 
 .blink {
   animation: blink 1s step-start infinite;
@@ -73,8 +70,8 @@ body {
 
 .ascii-photo {
   flex-shrink: 0;
-  width: 260px;
-  height: 320px;
+  width: 390px;
+  height: 480px;
   overflow: hidden;
   position: relative;
 }
@@ -96,11 +93,28 @@ body {
 
 .sub {
   color: #ccc;
+  font-size: 1.5rem;
+  line-height: 1.9;
 }
 
 .subtext {
   color: #ccc;
-  margin-left: 10px;
+  margin-left: 4ch;
+}
+
+.subtext.meta {
+  color: #555;
+  margin-bottom: 4px;
+}
+
+
+.title-link {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.title-link:hover {
+  color: #fff;
 }
 
 .divider {
@@ -112,8 +126,20 @@ body {
   margin-bottom: 15px;
 }
 
-.skills div {
-  margin-bottom: 5px;
+.skill-row {
+  display: flex;
+  gap: 1.5ch;
+  margin-bottom: 6px;
+}
+
+.skill-label {
+  color: #fff;
+  min-width: 11ch;
+}
+
+.skill-sep,
+.skill-val {
+  color: #ccc;
 }
 
 .end {
