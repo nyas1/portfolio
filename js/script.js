@@ -55,9 +55,17 @@ document.querySelectorAll('.scramble').forEach((el, i) => {
   setTimeout(() => scramble(el), i * 120);
 });
 
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav nav');
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('open');
+});
+
 document.querySelectorAll('.nav a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
+    navMenu.classList.remove('open');
     document.querySelector(this.getAttribute("href"))
       .scrollIntoView({ behavior: "smooth" });
   });
