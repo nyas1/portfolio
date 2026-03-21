@@ -43,8 +43,9 @@ fetch('assets/ascii-art.txt')
         const delay = (1 - r / (rows - 1)) * 0.3;
         particles.push({
           char: ch,
-          tx: rect.left + ox + c * charW,
-          ty: rect.top  + oy + r * lineH,
+          // document-relative targets so scroll doesn't misplace them
+          dtx: rect.left + window.scrollX + ox + c * charW,
+          dty: rect.top  + window.scrollY + oy + r * lineH,
           sx: Math.random() * vw,
           sy: Math.random() * vh,
           delay,
@@ -70,9 +71,12 @@ fetch('assets/ascii-art.txt')
       ctx.clearRect(0, 0, vw, vh);
       ctx.font = `${fontSize}px "JetBrains Mono", monospace`;
       ctx.fillStyle = '#fff';
+      const sx = window.scrollX, sy = window.scrollY;
       for (const p of particles) {
         const le = easeInOut(Math.max(0, Math.min(1, (t - p.delay) / 0.7)));
-        ctx.fillText(p.char, p.sx + (p.tx - p.sx) * le, p.sy + (p.ty - p.sy) * le);
+        // Convert doc coords → current viewport coords each frame
+        const tx = p.dtx - sx, ty = p.dty - sy;
+        ctx.fillText(p.char, p.sx + (tx - p.sx) * le, p.sy + (ty - p.sy) * le);
       }
       if (t < 1) {
         requestAnimationFrame(draw);
@@ -88,8 +92,9 @@ fetch('assets/ascii-art.txt')
         fCtx.textBaseline = 'top';
         fCtx.font = `${fontSize}px "JetBrains Mono", monospace`;
         fCtx.fillStyle = '#fff';
+        const finalRect = box.getBoundingClientRect();
         for (const p of particles) {
-          fCtx.fillText(p.char, p.tx - rect.left, p.ty - rect.top);
+          fCtx.fillText(p.char, p.dtx - window.scrollX - finalRect.left, p.dty - window.scrollY - finalRect.top);
         }
       }
     }
