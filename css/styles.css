@@ -86,6 +86,8 @@ body {
 .subtext {
   color: #ccc;
   margin-left: 4ch;
+  padding-left: 2ch;
+  text-indent: -2ch;
 }
 
 .subtext.meta {
@@ -200,6 +202,6 @@ body {
   }
 
   .skill-label {
-    min-width: 9ch;
+    min-width: 11ch;
   }
 }
