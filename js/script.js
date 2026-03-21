@@ -12,7 +12,6 @@ fetch('assets/ascii-art.txt')
 
     const box = document.querySelector('.ascii-photo');
 
-    // Measure char dimensions via hidden pre
     const probe = document.createElement('pre');
     probe.style.cssText = 'position:fixed;top:-9999px;left:-9999px;visibility:hidden;font-family:"JetBrains Mono",monospace;font-size:10px;line-height:1;white-space:pre;margin:0;padding:0;';
     probe.textContent = stripped.join('\n');
@@ -28,12 +27,8 @@ fetch('assets/ascii-art.txt')
     const oy       = (box.offsetHeight - preH * scale) / 2;
     const fontSize = 10 * scale;
 
-    // Box position in viewport (for full-page canvas coords)
     const rect = box.getBoundingClientRect();
-
     const vw = window.innerWidth, vh = window.innerHeight;
-
-    // Build particles — fully random start positions, no pattern
     const particles = [];
     for (let r = 0; r < rows; r++) {
       for (let c = 0; c < stripped[r].length; c++) {
@@ -53,13 +48,16 @@ fetch('assets/ascii-art.txt')
       }
     }
 
+    const dpr = window.devicePixelRatio || 1;
+
     // Full-viewport fixed canvas so particles aren't clipped by the box
     const canvas = document.createElement('canvas');
-    canvas.width  = vw;
-    canvas.height = vh;
-    canvas.style.cssText = 'position:fixed;top:0;left:0;pointer-events:none;z-index:50;';
+    canvas.width  = vw * dpr;
+    canvas.height = vh * dpr;
+    canvas.style.cssText = `position:fixed;top:0;left:0;width:${vw}px;height:${vh}px;pointer-events:none;z-index:50;`;
     document.body.appendChild(canvas);
     const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
     ctx.textBaseline = 'top';
 
     const DURATION = 2400;
@@ -71,30 +69,31 @@ fetch('assets/ascii-art.txt')
       ctx.clearRect(0, 0, vw, vh);
       ctx.font = `${fontSize}px "JetBrains Mono", monospace`;
       ctx.fillStyle = '#fff';
-      const sx = window.scrollX, sy = window.scrollY;
+      const scrollX = window.scrollX, scrollY = window.scrollY;
       for (const p of particles) {
         const le = easeInOut(Math.max(0, Math.min(1, (t - p.delay) / 0.7)));
-        // Convert doc coords → current viewport coords each frame
-        const tx = p.dtx - sx, ty = p.dty - sy;
+        const tx = p.dtx - scrollX, ty = p.dty - scrollY;
         ctx.fillText(p.char, p.sx + (tx - p.sx) * le, p.sy + (ty - p.sy) * le);
       }
       if (t < 1) {
         requestAnimationFrame(draw);
       } else {
-        // Hand off to a static in-box canvas
         canvas.remove();
+        const bw = box.offsetWidth, bh = box.offsetHeight;
         const final = document.createElement('canvas');
-        final.width  = box.offsetWidth;
-        final.height = box.offsetHeight;
-        final.style.cssText = 'position:absolute;top:0;left:0;display:block;';
+        final.width  = bw * dpr;
+        final.height = bh * dpr;
+        final.style.cssText = `position:absolute;top:0;left:0;width:${bw}px;height:${bh}px;display:block;`;
         box.appendChild(final);
         const fCtx = final.getContext('2d');
+        fCtx.scale(dpr, dpr);
         fCtx.textBaseline = 'top';
         fCtx.font = `${fontSize}px "JetBrains Mono", monospace`;
         fCtx.fillStyle = '#fff';
         const finalRect = box.getBoundingClientRect();
+        const fsX = window.scrollX, fsY = window.scrollY;
         for (const p of particles) {
-          fCtx.fillText(p.char, p.dtx - window.scrollX - finalRect.left, p.dty - window.scrollY - finalRect.top);
+          fCtx.fillText(p.char, p.dtx - fsX - finalRect.left, p.dty - fsY - finalRect.top);
         }
       }
     }
@@ -153,6 +152,7 @@ const navLinks = document.querySelectorAll('.nav a[href^="#"]');
 function setActive(link, skipScramble = false) {
   navLinks.forEach(a => {
     a.classList.remove('active');
+    clearInterval(a._scrambleInterval);
     a.textContent = a.dataset.text;
   });
   if (link) {
