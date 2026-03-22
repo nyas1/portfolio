@@ -91,14 +91,15 @@ body {
 }
 
 .subtext.meta {
-  color: #555;
+  color: #777;
   margin-bottom: 4px;
 }
 
 
 .title-link {
   color: #aaa;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .title-link:hover {
