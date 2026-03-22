@@ -20,11 +20,11 @@ fetch('assets/ascii-art.txt')
     const preH = probe.scrollHeight;
     document.body.removeChild(probe);
 
-    const scale    = Math.min(box.offsetWidth / preW, box.offsetHeight / preH);
-    const charW    = (preW / cols) * scale;
-    const lineH    = (preH / rows) * scale;
-    const ox       = (box.offsetWidth  - preW * scale) / 2;
-    const oy       = (box.offsetHeight - preH * scale) / 2;
+    const scale = Math.min(box.offsetWidth / preW, box.offsetHeight / preH);
+    const charW = (preW / cols) * scale;
+    const lineH = (preH / rows) * scale;
+    const ox = (box.offsetWidth - preW * scale) / 2;
+    const oy = (box.offsetHeight - preH * scale) / 2;
     const fontSize = 10 * scale;
 
     const rect = box.getBoundingClientRect();
@@ -52,7 +52,7 @@ fetch('assets/ascii-art.txt')
 
     // Full-viewport fixed canvas so particles aren't clipped by the box
     const canvas = document.createElement('canvas');
-    canvas.width  = vw * dpr;
+    canvas.width = vw * dpr;
     canvas.height = vh * dpr;
     canvas.style.cssText = `position:fixed;top:0;left:0;width:${vw}px;height:${vh}px;pointer-events:none;z-index:50;`;
     document.body.appendChild(canvas);
@@ -81,7 +81,7 @@ fetch('assets/ascii-art.txt')
         canvas.remove();
         const bw = box.offsetWidth, bh = box.offsetHeight;
         const final = document.createElement('canvas');
-        final.width  = bw * dpr;
+        final.width = bw * dpr;
         final.height = bh * dpr;
         final.style.cssText = `position:absolute;top:0;left:0;width:${bw}px;height:${bh}px;display:block;`;
         box.appendChild(final);

@@ -39,7 +39,6 @@ body {
   color: #fff;
 }
 
-
 .blink {
   animation: blink 1s step-start infinite;
 }
@@ -76,7 +75,6 @@ body {
   position: relative;
 }
 
-
 .sub {
   color: #ccc;
   font-size: 1.5rem;
@@ -94,7 +92,6 @@ body {
   color: #777;
   margin-bottom: 4px;
 }
-
 
 .title-link {
   color: #aaa;
@@ -202,7 +199,4 @@ body {
     margin-left: 2ch;
   }
 
-  .skill-label {
-    min-width: 11ch;
-  }
 }
