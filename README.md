@@ -2,6 +2,8 @@
 
 Personal portfolio — terminal-style, static site.
 
+Live at [nyas.dev](https://nyas.dev)
+
 ## Stack
 
 - HTML / CSS / JS
@@ -11,8 +13,12 @@ Personal portfolio — terminal-style, static site.
 ```
 portfolio/
 ├── index.html
+├── robots.txt
+├── sitemap.xml
+├── site.webmanifest
 ├── assets/
-│   └── ascii-art.txt
+│   ├── ascii-art.txt
+│   └── icons/
 ├── css/
 │   └── styles.css
 └── js/
