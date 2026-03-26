@@ -40,7 +40,7 @@ fetch('assets/ascii-art.txt')
           char: ch,
           // document-relative targets so scroll doesn't misplace them
           dtx: rect.left + window.scrollX + ox + c * charW,
-          dty: rect.top  + window.scrollY + oy + r * lineH,
+          dty: rect.top + window.scrollY + oy + r * lineH,
           sx: Math.random() * vw,
           sy: Math.random() * vh,
           delay,
@@ -99,6 +99,97 @@ fetch('assets/ascii-art.txt')
     }
     requestAnimationFrame(draw);
   });
+
+// Grid background
+(function () {
+  const canvas = document.getElementById('grid-bg');
+  const ctx = canvas.getContext('2d');
+  const CELL = 12;
+  const RADIUS = 3;
+  const MAX_OPACITY = 0.4;
+
+  const FADE = 0.96;
+  let cols, rows;
+  let mouseX = -999, mouseY = -999;
+  const cells = new Map(); // "c,r" → { c, r, opacity }
+
+  function resize() {
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = window.innerWidth * dpr;
+    canvas.height = window.innerHeight * dpr;
+    canvas.style.width = window.innerWidth + 'px';
+    canvas.style.height = window.innerHeight + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    cols = Math.ceil(window.innerWidth / CELL) + 1;
+    rows = Math.ceil(window.innerHeight / CELL) + 1;
+  }
+
+  function getCellTargets(cx, cy) {
+    const map = new Map();
+    const range = Math.ceil(RADIUS);
+    for (let dr = -range; dr <= range; dr++) {
+      for (let dc = -range; dc <= range; dc++) {
+        const c = Math.floor(cx) + dc;
+        const r = Math.floor(cy) + dr;
+        if (c < 0 || r < 0 || c >= cols || r >= rows) continue;
+        const dist = Math.sqrt((c + 0.5 - cx) ** 2 + (r + 0.5 - cy) ** 2);
+        if (dist >= RADIUS) continue;
+        map.set(`${c},${r}`, { c, r, opacity: MAX_OPACITY * (1 - dist / RADIUS) ** 2 });
+      }
+    }
+    return map;
+  }
+
+  function draw() {
+    const targets = getCellTargets(mouseX / CELL, mouseY / CELL);
+
+    // Only raise opacity, never lower it — lets cells fade from peak brightness
+    for (const [key, cell] of targets) {
+      if (!cells.has(key) || cells.get(key).opacity < cell.opacity)
+        cells.set(key, cell);
+    }
+
+    // Fade out cells no longer in range
+    for (const [key, cell] of cells) {
+      if (!targets.has(key)) {
+        cell.opacity *= FADE;
+        if (cell.opacity < 0.003) cells.delete(key);
+      }
+    }
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const [, { c, r, opacity }] of cells) {
+      ctx.fillStyle = `rgba(255,255,255,${opacity})`;
+      ctx.fillRect(c * CELL, r * CELL, CELL, CELL);
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  window.addEventListener('mouseleave', () => {
+    mouseX = -999; mouseY = -999;
+  });
+
+  window.addEventListener('touchmove', e => {
+    const t = e.touches[0];
+    mouseX = t.clientX;
+    mouseY = t.clientY;
+  }, { passive: true });
+
+  window.addEventListener('touchend', () => {
+    mouseX = -999; mouseY = -999;
+  });
+
+  window.addEventListener('resize', resize);
+
+  resize();
+  requestAnimationFrame(draw);
+})();
 
 const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&./+-';
 
