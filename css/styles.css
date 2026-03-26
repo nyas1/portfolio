@@ -3,7 +3,13 @@ body {
   background: #000;
   color: #fff;
   font-family: "JetBrains Mono", monospace;
+  cursor: url("/assets/cursors/cursor-default.svg") 8 8, auto;
 }
+
+a, button, [role="button"] {
+  cursor: url("/assets/cursors/cursor-pointer.svg") 8 8, pointer;
+}
+
 
 .nav {
   position: fixed;
@@ -36,7 +42,9 @@ body {
 }
 
 .nav nav a.active {
-  color: #fff;
+  color: #000;
+  background: #fff;
+  padding: 1px 4px;
 }
 
 .blink {
@@ -140,7 +148,6 @@ body {
   color: #fff;
   font-family: "JetBrains Mono", monospace;
   font-size: 1rem;
-  cursor: pointer;
   padding: 0;
 }
 

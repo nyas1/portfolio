@@ -106,7 +106,7 @@ function scramble(el, targetOverride, fast = false) {
   const target = targetOverride !== undefined ? targetOverride : el.dataset.text;
   if (!target) return;
   const ipc = fast ? 2 : 6;   // iterations per char
-  const ms  = fast ? 13 : 40; // interval ms
+  const ms = fast ? 26 : 40; // interval ms
   let iteration = 0;
   const total = target.length * ipc;
   clearInterval(el._scrambleInterval);
