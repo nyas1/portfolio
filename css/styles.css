@@ -10,7 +10,6 @@ a, button, [role="button"] {
   cursor: url("/assets/cursors/cursor-pointer.svg") 8 8, pointer;
 }
 
-
 #grid-bg {
   position: fixed;
   top: 0;
@@ -34,6 +33,12 @@ a, button, [role="button"] {
   padding: 10px 20px;
   box-sizing: border-box;
   z-index: 100;
+}
+
+.logo {
+  background: #fff;
+  color: #000;
+  padding: 1px 6px;
 }
 
 .nav nav {

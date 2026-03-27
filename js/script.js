@@ -109,8 +109,9 @@ fetch('assets/ascii-art.txt')
   const MAX_OPACITY = 0.4;
 
   const FADE = 0.96;
+  const FADE_OUT = 0.95;
   let cols, rows;
-  let mouseX = -999, mouseY = -999;
+  let mouseX = -1000, mouseY = -1000;
   const cells = new Map(); // "c,r" → { c, r, opacity }
 
   function resize() {
@@ -149,10 +150,10 @@ fetch('assets/ascii-art.txt')
         cells.set(key, cell);
     }
 
-    // Fade out cells no longer in range
+    const fadeRate = mouseX >= 0 ? FADE : FADE_OUT;
     for (const [key, cell] of cells) {
       if (!targets.has(key)) {
-        cell.opacity *= FADE;
+        cell.opacity *= fadeRate;
         if (cell.opacity < 0.003) cells.delete(key);
       }
     }
@@ -171,9 +172,9 @@ fetch('assets/ascii-art.txt')
     mouseY = e.clientY;
   });
 
-  window.addEventListener('mouseleave', () => {
-    mouseX = -999; mouseY = -999;
-  });
+  function resetMouse() { mouseX = -1000; mouseY = -1000; }
+  window.addEventListener('mouseleave', resetMouse);
+  document.documentElement.addEventListener('mouseleave', resetMouse);
 
   window.addEventListener('touchmove', e => {
     const t = e.touches[0];
@@ -182,7 +183,7 @@ fetch('assets/ascii-art.txt')
   }, { passive: true });
 
   window.addEventListener('touchend', () => {
-    mouseX = -999; mouseY = -999;
+    mouseX = -1000; mouseY = -1000;
   });
 
   window.addEventListener('resize', resize);
