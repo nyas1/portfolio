@@ -80,6 +80,10 @@ a, button, [role="button"] {
   line-height: 1.7;
 }
 
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 .home-layout {
   display: flex;
   align-items: flex-start;

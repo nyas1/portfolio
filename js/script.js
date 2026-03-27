@@ -182,9 +182,7 @@ fetch('assets/ascii-art.txt')
     mouseY = t.clientY;
   }, { passive: true });
 
-  window.addEventListener('touchend', () => {
-    mouseX = -1000; mouseY = -1000;
-  });
+  window.addEventListener('touchend', resetMouse);
 
   window.addEventListener('resize', resize);
 
@@ -197,7 +195,7 @@ const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&./+-';
 function scramble(el, targetOverride, fast = false) {
   const target = targetOverride !== undefined ? targetOverride : el.dataset.text;
   if (!target) return;
-  const ipc = fast ? 2 : 6;   // iterations per char
+  const ipc = fast ? 2 : 6; // iterations per char
   const ms = fast ? 26 : 40; // interval ms
   let iteration = 0;
   const total = target.length * ipc;
