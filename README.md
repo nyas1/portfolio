@@ -18,6 +18,7 @@ portfolio/
 ├── site.webmanifest
 ├── assets/
 │   ├── ascii-art.txt
+│   ├── cursors/
 │   └── icons/
 ├── css/
 │   └── styles.css
