@@ -288,3 +288,5 @@ document.addEventListener('touchend', function(e) {
 // Pointer-events rules bound to scramblers.
 
 // TextScramble engine initialized.
+
+// Mobile hamburger dropdown initialized.
