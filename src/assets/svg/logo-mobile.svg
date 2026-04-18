@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 264" class="logo-svg">
+  <rect x="6" y="0" width="36" height="12" fill="currentColor" />
+  <rect x="60" y="0" width="30" height="12" fill="currentColor" />
+  <rect x="0" y="12" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="12" y="12" width="36" height="12" fill="currentColor" />
+  <rect x="54" y="12" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="66" y="12" width="18" height="12" fill="currentColor" />
+  <rect x="6" y="24" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="12" y="24" width="18" height="12" fill="currentColor" />
+  <rect x="30" y="24" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="36" y="24" width="18" height="12" fill="currentColor" />
+  <rect x="60" y="24" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="66" y="24" width="18" height="12" fill="currentColor" />
+  <rect x="96" y="24" width="30" height="12" fill="currentColor" />
+  <rect x="132" y="24" width="24" height="12" fill="currentColor" />
+  <rect x="168" y="24" width="36" height="12" fill="currentColor" />
+  <rect x="228" y="24" width="30" height="12" fill="currentColor" />
+  <rect x="6" y="36" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="12" y="36" width="18" height="12" fill="currentColor" />
+  <rect x="30" y="36" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="42" y="36" width="18" height="12" fill="currentColor" />
+  <rect x="60" y="36" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="66" y="36" width="18" height="12" fill="currentColor" />
+  <rect x="90" y="36" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="102" y="36" width="18" height="12" fill="currentColor" />
+  <rect x="126" y="36" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="132" y="36" width="18" height="12" fill="currentColor" />
+  <rect x="162" y="36" width="30" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="192" y="36" width="18" height="12" fill="currentColor" />
+  <rect x="222" y="36" width="18" height="12" fill="currentColor" />
+  <rect x="240" y="36" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="6" y="48" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="12" y="48" width="18" height="12" fill="currentColor" />
+  <rect x="36" y="48" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="48" y="48" width="36" height="12" fill="currentColor" />
+  <rect x="96" y="48" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="102" y="48" width="18" height="12" fill="currentColor" />
+  <rect x="126" y="48" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="132" y="48" width="18" height="12" fill="currentColor" />
+  <rect x="168" y="48" width="42" height="12" fill="currentColor" />
+  <rect x="216" y="48" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="228" y="48" width="30" height="12" fill="currentColor" />
+  <rect x="6" y="60" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="12" y="60" width="18" height="12" fill="currentColor" />
+  <rect x="42" y="60" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="54" y="60" width="30" height="12" fill="currentColor" />
+  <rect x="96" y="60" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="102" y="60" width="18" height="12" fill="currentColor" />
+  <rect x="126" y="60" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="132" y="60" width="18" height="12" fill="currentColor" />
+  <rect x="162" y="60" width="18" height="12" fill="currentColor" />
+  <rect x="180" y="60" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="192" y="60" width="18" height="12" fill="currentColor" />
+  <rect x="222" y="60" width="24" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="246" y="60" width="18" height="12" fill="currentColor" />
+  <rect x="6" y="72" width="30" height="12" fill="currentColor" />
+  <rect x="48" y="72" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="60" y="72" width="30" height="12" fill="currentColor" />
+  <rect x="96" y="72" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="108" y="72" width="42" height="12" fill="currentColor" />
+  <rect x="156" y="72" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="168" y="72" width="48" height="12" fill="currentColor" />
+  <rect x="222" y="72" width="36" height="12" fill="currentColor" />
+  <rect x="0" y="84" width="30" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="54" y="84" width="30" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="102" y="84" width="30" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="132" y="84" width="18" height="12" fill="currentColor" />
+  <rect x="162" y="84" width="48" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="216" y="84" width="36" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="102" y="96" width="18" height="12" fill="currentColor" />
+  <rect x="126" y="96" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="132" y="96" width="18" height="12" fill="currentColor" />
+  <rect x="96" y="108" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="108" y="108" width="36" height="12" fill="currentColor" />
+  <rect x="102" y="120" width="36" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="6" y="132" width="36" height="12" fill="currentColor" />
+  <rect x="60" y="132" width="30" height="12" fill="currentColor" />
+  <rect x="102" y="132" width="18" height="12" fill="currentColor" />
+  <rect x="132" y="132" width="30" height="12" fill="currentColor" />
+  <rect x="360" y="132" width="18" height="12" fill="currentColor" />
+  <rect x="0" y="144" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="12" y="144" width="36" height="12" fill="currentColor" />
+  <rect x="54" y="144" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="66" y="144" width="18" height="12" fill="currentColor" />
+  <rect x="96" y="144" width="18" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="126" y="144" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="138" y="144" width="18" height="12" fill="currentColor" />
+  <rect x="354" y="144" width="18" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="6" y="156" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="12" y="156" width="18" height="12" fill="currentColor" />
+  <rect x="30" y="156" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="36" y="156" width="18" height="12" fill="currentColor" />
+  <rect x="60" y="156" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="66" y="156" width="18" height="12" fill="currentColor" />
+  <rect x="96" y="156" width="24" height="12" fill="currentColor" />
+  <rect x="132" y="156" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="138" y="156" width="18" height="12" fill="currentColor" />
+  <rect x="162" y="156" width="30" height="12" fill="currentColor" />
+  <rect x="198" y="156" width="30" height="12" fill="currentColor" />
+  <rect x="234" y="156" width="24" height="12" fill="currentColor" />
+  <rect x="264" y="156" width="48" height="12" fill="currentColor" />
+  <rect x="354" y="156" width="30" height="12" fill="currentColor" />
+  <rect x="6" y="168" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="12" y="168" width="18" height="12" fill="currentColor" />
+  <rect x="30" y="168" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="42" y="168" width="18" height="12" fill="currentColor" />
+  <rect x="60" y="168" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="66" y="168" width="18" height="12" fill="currentColor" />
+  <rect x="90" y="168" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="102" y="168" width="18" height="12" fill="currentColor" />
+  <rect x="132" y="168" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="138" y="168" width="18" height="12" fill="currentColor" />
+  <rect x="156" y="168" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="168" y="168" width="18" height="12" fill="currentColor" />
+  <rect x="192" y="168" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="204" y="168" width="18" height="12" fill="currentColor" />
+  <rect x="228" y="168" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="234" y="168" width="18" height="12" fill="currentColor" />
+  <rect x="258" y="168" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="270" y="168" width="18" height="12" fill="currentColor" />
+  <rect x="288" y="168" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="300" y="168" width="18" height="12" fill="currentColor" />
+  <rect x="348" y="168" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="360" y="168" width="18" height="12" fill="currentColor" />
+  <rect x="6" y="180" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="12" y="180" width="18" height="12" fill="currentColor" />
+  <rect x="36" y="180" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="48" y="180" width="36" height="12" fill="currentColor" />
+  <rect x="96" y="180" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="102" y="180" width="18" height="12" fill="currentColor" />
+  <rect x="132" y="180" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="138" y="180" width="36" height="12" fill="currentColor" />
+  <rect x="174" y="180" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="198" y="180" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="204" y="180" width="18" height="12" fill="currentColor" />
+  <rect x="228" y="180" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="234" y="180" width="18" height="12" fill="currentColor" />
+  <rect x="264" y="180" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="270" y="180" width="18" height="12" fill="currentColor" />
+  <rect x="294" y="180" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="300" y="180" width="18" height="12" fill="currentColor" />
+  <rect x="354" y="180" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="360" y="180" width="18" height="12" fill="currentColor" />
+  <rect x="6" y="192" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="12" y="192" width="18" height="12" fill="currentColor" />
+  <rect x="42" y="192" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="54" y="192" width="30" height="12" fill="currentColor" />
+  <rect x="96" y="192" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="102" y="192" width="18" height="12" fill="currentColor" />
+  <rect x="132" y="192" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="138" y="192" width="18" height="12" fill="currentColor" />
+  <rect x="156" y="192" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="168" y="192" width="18" height="12" fill="currentColor" />
+  <rect x="198" y="192" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="204" y="192" width="18" height="12" fill="currentColor" />
+  <rect x="228" y="192" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="234" y="192" width="18" height="12" fill="currentColor" />
+  <rect x="264" y="192" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="270" y="192" width="18" height="12" fill="currentColor" />
+  <rect x="294" y="192" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="300" y="192" width="18" height="12" fill="currentColor" />
+  <rect x="354" y="192" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="360" y="192" width="18" height="12" fill="currentColor" />
+  <rect x="6" y="204" width="30" height="12" fill="currentColor" />
+  <rect x="48" y="204" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="60" y="204" width="30" height="12" fill="currentColor" />
+  <rect x="96" y="204" width="30" height="12" fill="currentColor" />
+  <rect x="132" y="204" width="24" height="12" fill="currentColor" />
+  <rect x="162" y="204" width="30" height="12" fill="currentColor" />
+  <rect x="198" y="204" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="210" y="204" width="48" height="12" fill="currentColor" />
+  <rect x="264" y="204" width="24" height="12" fill="currentColor" />
+  <rect x="294" y="204" width="30" height="12" fill="currentColor" />
+  <rect x="354" y="204" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="360" y="204" width="18" height="12" fill="currentColor" />
+  <rect x="0" y="216" width="30" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="54" y="216" width="30" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="90" y="216" width="30" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="126" y="216" width="24" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="156" y="216" width="30" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="204" y="216" width="48" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="258" y="216" width="24" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="288" y="216" width="30" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="354" y="216" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="360" y="216" width="18" height="12" fill="currentColor" />
+  <rect x="330" y="228" width="18" height="12" fill="currentColor" />
+  <rect x="354" y="228" width="6" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="360" y="228" width="18" height="12" fill="currentColor" />
+  <rect x="324" y="240" width="12" height="12" fill="currentColor" opacity="0.3" />
+  <rect x="336" y="240" width="36" height="12" fill="currentColor" />
+  <rect x="330" y="252" width="36" height="12" fill="currentColor" opacity="0.3" />
+</svg>
