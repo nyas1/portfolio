@@ -1,0 +1,13 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/js/analytics-entry.js --bundle --minify --outfile=src/js/analytics-inject.js --format=iife"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2"
+  }
+}
