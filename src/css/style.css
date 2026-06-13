@@ -174,7 +174,7 @@ nav ul li {
     box-sizing: border-box;
 }
 
-.nav-icon-link i {
+.nav-icon-link svg {
     width: 16px;
     height: 16px;
     fill: currentColor;
@@ -928,19 +928,3 @@ body.error-page footer {
 }
 
 /* Added badge hover interactions */
-
-/* Custom scanline rules added */
-
-/* CRT glow timing settings */
-
-/* Responsive styles update */
-
-/* Removed layout placeholders */
-
-/* Swipe indicator styling */
-
-/* Unified card styling */
-
-/* Font-family JetBrains Mono configuration */
-
-/* Final cleanups of duplicate classes */
