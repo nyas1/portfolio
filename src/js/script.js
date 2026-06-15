@@ -292,3 +292,5 @@ document.addEventListener('touchend', function(e) {
 // Mobile hamburger dropdown initialized.
 
 // Mobile swipe handlers bound.
+
+// Pointer-events rules bound to scramblers.
